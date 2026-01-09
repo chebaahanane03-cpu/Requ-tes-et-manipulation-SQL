@@ -1,0 +1,40 @@
+*  COUNT
+شحال كاين من مقال فهاد الطابلة
+SELECT COUNT(*) FROM Article;
+
+*  SUM
+جمع ليا جميع المشاهدات
+SELECT SUM(nb_vues) FROM Article;
+
+*  AVG
+شحال هو المعدل ديال المشاهدات
+SELECT AVG(nb_vues) FROM Article;
+
+*   MIN → أصغر قيمة
+    MAX → أكبر قيمة
+شنو هو آخر مقال تدار؟
+SELECT MAX(date_pub) FROM Article;
+
+*   GROUP BY
+لكل يوزر، قولي شحال كتب من مقال
+SELECT id_utilisateur, COUNT(*) AS nb_articles
+FROM Article
+GROUP BY id_utilisateur;
+
+*   WHERE
+صفي المقالات اللول، ومن بعد حسب
+WHERE date_pub >= '2024-01-01'
+
+*   HAVING
+حسب شحال كتب كل واحد
+ومن بعد خلّي غير لي عندهم أكثر من 2
+HAVING COUNT(*) > 2
+
+**  EX
+
+SELECT id_utilisateur, COUNT(*) AS nb_articles
+FROM Article
+GROUP BY id_utilisateur
+HAVING COUNT(*) > 2;
+ورّيني غير اليوزرات لي نشطين بزاف 
+لي كتبو أكثر من جوج مقالات
