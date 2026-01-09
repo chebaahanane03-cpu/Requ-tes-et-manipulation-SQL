@@ -1,0 +1,34 @@
+*   just titre et contenu : إلى بغينا غير بعض المعلومات
+SELECT titre, contenu FROM Article;   
+
+*   WHERE = بشرط
+SELECT titre, date_pub
+FROM Article
+WHERE date_pub >= '2024-01-01';
+
+*   WHERE titre LIKE '%SQL%'
+عطيني المقالات لي فالعنوان ديالهم كلمة SQL
+
+*   ORDER BY = رتب لي النتائج
+ORDER BY date_pub DESC;
+
+DESC = من الجديد للقديم 
+ASC = من القديم للجديد 
+
+*   LIMIT = عطيني غير عدد محدد
+LIMIT 5;
+
+
+**  EX
+SELECT titre
+FROM Article
+WHERE id_utilisateur = 1
+ORDER BY date_pub DESC
+LIMIT 5;
+عطيني آخر 5 مقالات
+ديال اليوزر رقم 1
+مرتبين من الجديد للقديم
+
+
+
+
