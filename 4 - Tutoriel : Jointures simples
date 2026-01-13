@@ -1,0 +1,47 @@
+**  INNER JOIN
+SELECT a.titre, u.nom
+FROM Article a
+INNER JOIN Utilisateur u ON a.id_utilisateur = u.id;
+غير المقالات لي مرتبطين بمستخدم 
+(Article a → سمّينا Article بـ a
+
+Utilisateur u → سمّينا Utilisateur بـ u
+
+ON a.id_utilisateur = u.id → الربط بينهم)
+
+**  LEFT JOIN
+كيرجع جميع المقالات
+حتى:
+لي عندها كاتب
+ولي ما عندهاش
+ إلا ما كاينش كاتب → الاسم كيكون NULL
+SELECT a.titre, u.nom
+FROM Article a
+LEFT JOIN Utilisateur u ON a.id_utilisateur = u.id;
+المقال كيبان ديما
+إلا ما كانش المستخدم → الاسم فارغ
+
+**  RIGHT JOIN
+كيرجع جميع المستخدمين
+حتى لي ما عندهم حتى مقال
+SELECT a.titre, u.nom
+FROM Article a
+RIGHT JOIN Utilisateur u ON a.id_utilisateur = u.id;
+
+**   Filter (WHERE)من بعد JOIN
+SELECT a.titre, u.nom
+FROM Article a
+INNER JOIN Utilisateur u ON a.id_utilisateur = u.id
+WHERE u.nom = 'Alice';
+**  JOIN مع 3 جداول
+SELECT a.titre, u.nom, c.contenu
+FROM Article a
+INNER JOIN Utilisateur u ON a.id_utilisateur = u.id
+INNER JOIN Commentaire c ON a.id = c.id_article;
+*************
+JOIN = ربط الجداول
+ INNER JOIN = غير لي متطابق
+ LEFT JOIN = كلشي من الجدول الأول
+ RIGHT JOIN = كلشي من الجدول الثاني
+ Alias = اختصار وسهولة
+ WHERE كتجي من بعد JOIN
