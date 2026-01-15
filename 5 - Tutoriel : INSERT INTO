@@ -1,0 +1,30 @@
+**  الصيغة العامة (Syntax)
+INSERT INTO NomTable (colonne1, colonne2, colonne3)
+VALUES (valeur1, valeur2, valeur3);
+ NomTable: اسم الجدول
+ colonne: الأعمدة
+valeur: لقيم لي غاندخلو
+ما كتبناش id
+
+حيث راه AUTO_INCREMENT → كيطلع بوحدو
+**   
+INSERT INTO Utilisateur
+VALUES (NULL, 'Alice', 'alice@test.com', '1234');
+
+ NULL معناها:
+“أنا ما غاندخل حتى قيمة هنا، خدم خدمتك بوحدك"
+**  دخال مقال (Article)
+INSERT INTO Article (titre, contenu, date_pub, id_utilisateur)
+VALUES ('Mon premier article', 'Contenu de l\'article', '2025-07-18', 1);
+هنا:
+
+id_utilisateur = 1
+يعني:
+ هاد المقال تابع للمستخدم لي عندو id = 1
+**  إدخال بزاف ديال السطور مرة وحدة (Insertion multiple)
+INSERT INTO Utilisateur (nom, email, mot_de_passe)
+VALUES 
+  ('Bob', 'bob@test.com', 'passbob'),
+  ('Charlie', 'charlie@test.com', 'passcharlie');
+
+
