@@ -1,0 +1,33 @@
+** UPDATE
+UPDATE NomTable
+SET colonne1 = valeur1, colonne2 = valeur2
+WHERE condition;
+WHERE مهم بزاف
+إلى ما درناهش → غادي يتبدل كلشي
+*EX
+UPDATE Utilisateur
+SET email = 'nouveau@mail.com'
+WHERE id = 1;
+هنا:
+بدّلنا غير email
+غير للمستخدم لي عندو id = 1
+
+**  DELETE
+مسح سطر واحد
+DELETE FROM Article
+WHERE date_pub < '2024-01-01';
+جميع المقالات القديمة
+ قبل 2024
+*****************
+UPDATE = نبدل الداتا
+DELETE = نمسح الداتا
+WHERE ضروري بزاف
+
+
+
+
+
+
+
+
+
