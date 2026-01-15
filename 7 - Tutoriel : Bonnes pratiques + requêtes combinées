@@ -1,0 +1,36 @@
+*** 
+
+START TRANSACTION;
+
+-- إضافة مقال جديد
+INSERT INTO Article (titre, contenu, date_pub, id_utilisateur)
+VALUES ('Nouveau post', 'Texte exemple', '2025-07-18', 1);
+
+-- تحديث بيانات مستخدم
+UPDATE Utilisateur
+SET email = 'alice.update@test.com'
+WHERE id = 1;
+
+-- حذف تعليق
+DELETE FROM Commentaire WHERE id = 3;
+
+COMMIT;
+-- أو ROLLBACK إذا كان خطأ
+الأوامر الرئيسية
+START TRANSACTION → نبدأو العملية
+COMMIT → نأكد التغييرات (كلشي تمام)
+ROLLBACK → نرجعو كلشي كيف كان إلا وقع خطأ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
